@@ -16,7 +16,7 @@ text = """
 """
 
 # символы в тексте
-marks = '«»,.()—'
+marks = '''«»—!()[]{};?@#$%:'"\,./^&amp;*_'''
 # вспомогательный список, в котором хранится неотсортированная информация о количестве слов
 end_list = []
 
@@ -43,7 +43,3 @@ sort_list = sorted(end_list, key=lambda elem: elem[1], reverse=True)
 # рейтинг - 10 самых встречаемых слов
 for i, value in enumerate(sort_list[0:10], start = 1):
     print(i, *value, 'раз(а)')
-
-
-
-
